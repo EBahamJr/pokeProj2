@@ -19,17 +19,19 @@
         </form>
     </div>
 </div> -->
-<form>
-    <ul class="form-style-1">
-        <li><label>Pokemon Name</label><input type="text" name="field1" class="field-long"/></li>
-        <li>
+<form class="container" [formGroup]="angForm" novalitdate>
+    <div class="form-style-1">
+        <li><label>Pokemon Name</label><input type="text" name="field1" class="field-long" class="form-control" 
+            formControlName= "PokemonName"
+            #PokemonName /></li>
+        <div>
             <label>Generation</label>
             <select name="field4" class="field-select">
             <option value="Gen_1">Gen 1</option>
             <option value="Gen_2">Gen 2</option>
             <option value="Gen_3">Gen 3</option>
             </select>
-        </li>
+        </div>
         <li>
             <label>Description</label>
             <textarea name="field5" id="field5" class="field-long field-textarea"></textarea>
@@ -37,5 +39,5 @@
         <li>
             <input type="submit" value="Submit" />
         </li>
-    </ul>
-    </form>
+    </div>
+</form>
