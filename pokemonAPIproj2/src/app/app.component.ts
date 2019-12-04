@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import {SlimLoadingBarService} from 'ng2-slim-loading-bar';
 import {NavigationCancel, 
         Event,
         NavigationEnd,
@@ -15,23 +14,23 @@ import {NavigationCancel,
 })
 export class AppComponent {
   title = 'pokemonAPIproj2';
-  constructor(private loadingBar: SlimLoadingBarService, private router: Router){
+  constructor(private router: Router){
     this.router.events.subscribe((event: Event) => {
       this.navigationInterceptor(event);
     });
   }
   private navigationInterceptor(event: Event) : void {
     if(event instanceof NavigationStart){
-      this.loadingBar.start();
+      // this.loadingBar.start();
     }
     if(event instanceof NavigationEnd){
-      this.loadingBar.complete();
+      //this.loadingBar.complete();
     }
     if(event instanceof NavigationCancel){
-      this.loadingBar.stop();
+      // this.loadingBar.stop();
     }
     if(event instanceof NavigationError){
-      this.loadingBar.stop();
+      // this.loadingBar.stop();
     }
   }
 }

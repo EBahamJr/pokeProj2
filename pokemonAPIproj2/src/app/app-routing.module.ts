@@ -3,7 +3,6 @@ import { Routes, RouterModule } from '@angular/router';
 import {PokemonAddComponent} from './pokemon-add/pokemon-add.component';
 import {PokemonGetComponent} from './pokemon-get/pokemon-get.component';
 import {PokemonEditComponent} from './pokemon-edit/pokemon-edit.component';
-import {SlimLoadingBarModule} from 'ng2-slim-loading-bar';
 
 
 
@@ -23,7 +22,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes), SlimLoadingBarModule],
+  imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
