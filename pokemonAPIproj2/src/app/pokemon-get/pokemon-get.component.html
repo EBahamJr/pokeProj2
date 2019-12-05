@@ -1,1 +1,19 @@
-<p>pokemon-get works!</p>
+<div class="Pokemon-View">
+        <table class="table table-hover">
+                <thead>
+                <tr>
+                    <td>Pokemon Name</td>
+                    <td>Pokemon Description</td>
+                    <td>Pokemon Price</td>
+                </tr>
+                </thead>
+              
+                <tbody>
+                    <tr *ngFor= "let poke of pokemon">
+                        <td>{{ poke.name }}</td>
+                        <td>{{ poke.PokemonDescription }}</td>
+                        <td>{{ poke.PokemonPrice }}</td>
+                    </tr>
+                </tbody>
+              </table>
+</div>

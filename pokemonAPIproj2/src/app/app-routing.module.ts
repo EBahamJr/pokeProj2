@@ -16,7 +16,7 @@ const routes: Routes = [
     component: PokemonEditComponent
   },
   {
-    path: 'products',
+    path: 'pokemon',
     component: PokemonGetComponent
   },
 ];

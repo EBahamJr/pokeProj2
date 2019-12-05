@@ -1,4 +1,4 @@
-export default class Product {
+export default class Pokemon {
     PokemonName: string;
     PokemonType: string;
     PokemonEntry: string;

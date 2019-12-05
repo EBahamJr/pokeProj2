@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup,  FormBuilder,  Validators } from '@angular/forms';
+import { PokemonService } from '../pokemon.service';
 
 
 @Component({
@@ -10,7 +11,7 @@ import { FormGroup,  FormBuilder,  Validators } from '@angular/forms';
 export class PokemonAddComponent implements OnInit {
 
   angForm: FormGroup;
-  constructor(private fb: FormBuilder) {
+  constructor(private fb: FormBuilder, private ps: PokemonService) {
     this.createForm();
    }
 
@@ -18,10 +19,14 @@ export class PokemonAddComponent implements OnInit {
   }
   createForm() {
     this.angForm = this.fb.group({
-      PokemonName: ['', Validators.required ],
-      PokemonDescription: ['', Validators.required ],
-      PokemonType: ['', Validators.required ]
+      PokemonName: [''],
+      PokemonDescription: [''],
+      PokemonType: ['']
     });
+  }
+
+  addPokemon(PokemonName, PokemonType, PokemonEntry){
+    this.ps.addPokemon(PokemonName, PokemonType, PokemonEntry);
   }
 
 }

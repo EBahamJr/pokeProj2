@@ -37,7 +37,12 @@
             <textarea name="field5" id="field5" class="field-long field-textarea"></textarea>
         </li>
         <li>
-            <input type="submit" value="Submit" />
+                <div class="form-style-1">
+                        <button (click) = "addProduct(ProductName.value, ProductDescription.value, ProductPrice.value)" type="submit" class="btn btn-primary"
+                        [disabled]="angForm.pristine || angForm.invalid" >
+                          Create Product
+                        </button>
+                </div>
         </li>
     </div>
 </form>
